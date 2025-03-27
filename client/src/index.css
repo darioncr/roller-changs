@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f6f5;
+  font-family: "Sedgwick Ave", cursive; 
+}
+
+html{
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px; 
+}
+
