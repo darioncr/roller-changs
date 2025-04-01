@@ -3,7 +3,7 @@ import { RiFacebookBoxFill, RiInstagramFill, RiTiktokFill } from "@remixicon/rea
 const Footer = () => {
   return (
     <footer className="container mx-auto px-6 py-8 flex flex-col items-center text-center bg-gradient-to-b 
-    from-orange-500 to-orange-400 rounded-xl shadow-md mt-12 md:mt-16" id="contacto">
+    from-orange-500 to-orange-400 shadow-md mt-12 md:mt-16" id="contacto">
       <h1 className=" px-5 py-5 font-extrabold text-3xl uppercase text-white">Contacto</h1>
       <p className=" text-white text-xl tezxt-white">
         Para más contenido no dudes en visitar nuestras redes sociales

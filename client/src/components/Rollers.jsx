@@ -7,7 +7,7 @@ const Rollers = () => {
     <section
       id="rollers"
       className="container mx-auto px-6 py-12 flex flex-col items-center text-center bg-gradient-to-b 
-    from-orange-500 to-orange-400 rounded-xl shadow-md mt-16 md:mt-20"
+    from-orange-500 to-orange-400 shadow-md mt-16 md:mt-20"
     >
       <motion.h1
         initial={{ opacity: 0, y: 100 }}

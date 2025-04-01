@@ -10,7 +10,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="fixed top-4 z-50 flex w-full flex-col items-center justify-center">
+    <nav className="fixed top-0 z-50 flex w-full flex-col items-center justify-center">
       <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -45,7 +45,7 @@ const Navbar = () => {
                 focus:outline-none"
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
           >
-            {isOpen ? <RiCloseFill /> : <RiMenu3Line />}
+            {isOpen ? <RiCloseFill className="text-black" /> : <RiMenu3Line className="text-black"/>}
           </button>
         </div>
       </motion.div>

@@ -6,20 +6,20 @@ import { motion } from "framer-motion"
 
 const FormularioDonaciones = () => {
   const [amount, setAmount] = useState(1);
-  const [totalAmount, setTotalAmount] = useState(10);
+  const [totalAmount, setTotalAmount] = useState(1);
 
   const [preferenceId, setPreferenceId] = useState(null);
 
   initMercadoPago("APP_USR-34efbc59-b356-4e2c-88c7-819848c6cee2");
 
-  const handleButtonClick = (amount) => {
-    setAmount(amount);
-    setTotalAmount(amount * 10);
-  };
+  // const handleButtonClick = (amount) => {
+  //   setAmount(amount);
+  //   setTotalAmount(amount * 10);
+  // };
 
   const handleInputChange = (e) => {
     setAmount(e.target.value);
-    setTotalAmount(e.target.value * 10);
+    setTotalAmount(e.target.value * 1);
   };
 
   //Mercado pago functions
@@ -77,7 +77,7 @@ const FormularioDonaciones = () => {
         </motion.div>
 
         {/* Botones de donación */}
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -107,7 +107,7 @@ const FormularioDonaciones = () => {
               ${amount}
             </motion.button>
           ))}
-        </motion.div>
+        </motion.div> */}
         {/* Input para otra cantidad */}
         <motion.div
           variants={{

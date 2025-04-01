@@ -1,10 +1,4 @@
-import { VIDEOS } from "../constans";
-import React from "react";
-import { motion } from "framer-motion";
-
-const Rodadas = () => {
-  return (
-    <section className="container mx-auto px-4 py-10" id="rodadas">
+<section className="container mx-auto px-4 py-10" id="rodadas">
   <div className="max-w-5xl mx-auto">
     <motion.h1
       initial={{ opacity: 0, y: 50 }}
@@ -73,7 +67,3 @@ const Rodadas = () => {
     </motion.div>
   </div>
 </section>
-  );
-};
-
-export default Rodadas;

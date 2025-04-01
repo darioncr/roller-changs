@@ -4,13 +4,13 @@ import { motion } from "framer-motion"
 const Hero = () => {
   return (
     <section id="/" className="container mx-auto px-6 py-12 flex flex-col items-center text-center bg-gradient-to-b
-     from-orange-500 to-orange-400 rounded-xl shadow-md mt-16 md:mt-20 font-bold">
+     from-orange-500 to-orange-400 shadow-md mt-16 md:mt-20 font-bold">
       <motion.h1
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
         className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight bg-clip-text text-transparent bg-gradient-to-r
-         from-white to-gray-200 flex items-center justify-center sedgwick-ave-regular">
+         from-white to-gray-200 flex items-center justify-center sedgwick-ave-regula py-2">
         {HERO_CONTENT.title}
       </motion.h1>
       <motion.p
@@ -25,7 +25,7 @@ const Hero = () => {
         initial={{ opacity: 0, }}
         whileInView={{ opacity: 1.5, }}
         transition={{ duration: 3, delay: 0.5 }}
-        className="mt-4 w-full max-w-3xl overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-500">
+        className="mt-2 w-full max-w-3xl overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-500">
         <img
           src={HERO_CONTENT.image}
           alt="Hero"
