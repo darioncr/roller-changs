@@ -3,6 +3,7 @@ import todos from "../assets/todos.jpg";
 import rodada1 from "../assets/rodada1.mp4";
 import rodada2 from "../assets/rodada2.mp4";
 import rodada3 from "../assets/rodada3.mp4";
+import rodada4 from "../assets/rodada4.mp4";
 
 import ian from "../assets/ian.jpeg"
 import maxi from "../assets/maxi.jpeg"
@@ -23,9 +24,10 @@ image: todos,
 }
 
 export const VIDEOS = [
-    { id: 1, title: "Video 1", url: rodada1 },
-    { id: 2, title: "Video 2", url: rodada2 },
-    { id: 3, title: "Video 3", url: rodada3 },
+    { id: 1, title: "Video 1", url: rodada1, title2:"Nocturna",descripcion:"Rodada con los Balam" },
+    { id: 2, title: "Video 2", url: rodada2, title2:"Tepoz",descripcion:"Rodada extrema de la ciudad al estado"},
+    { id: 3, title: "Video 3", url: rodada3, title2:"Navideña",descripcion:"Rodada con tematica Navideña"},
+    { id: 4, title: "Video 4", url: rodada4, title2:"Acid Beats",descripcion:"Rodada con los Acid Rollers" },
   ];
 
 

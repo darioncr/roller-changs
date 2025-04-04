@@ -1,6 +1,6 @@
-import React from 'react'
-import { ROLLERS_IMAGE } from "../constans"
-import { motion } from "framer-motion"
+import React from "react";
+import { ROLLERS_IMAGE } from "../constans";
+import { motion } from "framer-motion";
 
 const Rollers = () => {
   return (
@@ -26,17 +26,22 @@ const Rollers = () => {
           visible: {
             opacity: 1,
             transition: {
-              staggerChildren: 0.2, 
+              staggerChildren: 0.2,
             },
           },
         }}
       >
+        {/* Imagen de los integrantes */}
         {ROLLERS_IMAGE.map((image) => (
           <motion.div
             key={image.id}
             variants={{
               hidden: { opacity: 0, y: 40 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, ease: "easeOut" },
+              },
             }}
             className="relative bg-orange-200 p-4 rounded-xl shadow-xl border-2 border-transparent
              hover:border-orange-100 transition-all duration-300 hover:scale-110"
@@ -46,12 +51,14 @@ const Rollers = () => {
               alt={image.title}
               className="w-48 h-48 object-cover rounded-lg"
             />
-            <p className="mt-3 text-lg font-semibold text-black text-center">{image.name}</p>
+            <p className="mt-3 text-lg font-semibold text-black text-center">
+              {image.name}
+            </p>
           </motion.div>
         ))}
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default Rollers
+export default Rollers;

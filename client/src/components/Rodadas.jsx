@@ -4,75 +4,69 @@ import { motion } from "framer-motion";
 
 const Rodadas = () => {
   return (
-    <section className="container mx-auto px-4 py-10" id="rodadas">
-  <div className="max-w-5xl mx-auto">
-    <motion.h1
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: true }}
-      className="text-3xl font-semibold text-center mb-12 text-neutral-800 uppercase"
-    >
-      Rodadas
-    </motion.h1>
-
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: { staggerChildren: 0.3, ease: "easeInOut" },
-        },
-      }}
-      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-    >
-      {VIDEOS.map((video) => (
+    <section className="container mx-auto px-6 py-12" id="rodadas">
+      <div className="max-w-4xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold text-center text-black mb-8 uppercase"
+        >
+          Rodadas
+        </motion.h1>
         <motion.div
-          key={video.id}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={{
-            hidden: { opacity: 0, y: 50 },
+            hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              y: 0,
-              transition: { duration: 1, ease: "easeOut" },
+              transition: { staggerChildren: 0.2, ease: "easeInOut" },
             },
           }}
-          className="relative group flex justify-center w-full"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {/* Contenedor adaptable */}
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-            {/* Video Responsive */}
-            <video
-              src={video.url}
-              className="w-full h-auto rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-110"
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
-
-            {/* Overlay adaptable al tamaño del video */}
-            <div
-              className="absolute inset-0 flex flex-col items-center justify-center
-              opacity-0 backdrop-blur-lg transition-opacity duration-500 
-              group-hover:opacity-100 bg-black/50 rounded-lg p-4"
+          {/* Videos de rodadas */}
+          {VIDEOS.map((video) => (
+            <motion.div
+              key={video.id}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+              }}
+              className="relative group flex justify-center w-full"
             >
-              <h3 className="text-lg sm:text-xl font-medium text-white text-center">
-                Rodada {video.id}
-              </h3>
-              <p className="text-white text-sm sm:text-base text-center">
-                {video.descripcion}
-              </p>
-            </div>
-          </div>
+              <div className="relative w-full max-w-md md:max-w-lg aspect-video overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow  duration-300">
+                <video
+                  src={video.url}
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+
+                {/* Información de las rodadas */}
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center 
+              bg-black/30 text-white text-center p-6 transition-opacity duration-500
+              opacity-100 md:opacity-0 md:group-hover:opacity-100"
+                >
+                  <h3 className="text-lg sm:text-xl font-semibold">
+                    Rodada: {video.title2}
+                  </h3>
+                  <p className="text-sm sm:text-base mt-2">
+                    {video.descripcion}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
-      ))}
-    </motion.div>
-  </div>
-</section>
+      </div>
+    </section>
   );
 };
 
